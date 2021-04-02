@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm spaceUp">
+      <p class="title mx-auto d-block">Mis plantas.</p>
+      <button type="button" class="btn btn-outline-secondary btn-lg buttonAdd" (click)="openScrollableContent(longContent)" >
+        +
+      </button>
+    </div>
+    <div class="col-sm spaceImg">
+      <img
+        src="../assets/img/planta.png"
+        class="mx-auto d-block"
+        alt=""
+        width="250"
+        height="250"
+      />
+      <div class="spaceTxt mx-auto d-block">
+        <p>
+          En este apartado encontraras las plantas que tengas bajo tu preciado
+          cuidado, además podrás monitorear las condiciones en las que se
+          encuentran.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Content-->
+
+
+
+<ng-template #longContent let-modal>
+  <div class="modal-header unborder">
+    <h4 class="modal-title">Agregar una nueva planta.</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p class="title-qr">Escanea el codigo QR.</p>
+    
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+
+    <section class="results" *ngIf="qrResultString">
+      <div>
+        <small>Result</small>
+        <strong>{{ qrResultString }}</strong>
+      </div>
+      <button mat-icon-button (click)="clearResult()">&times;</button>
+    </section>
+
+  </div>
+  <div class="modal-footer unborder">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>
+
+<!--Final Modal Content-->
+
+

@@ -1,0 +1,26 @@
+.content{
+    margin-top: 100px;
+}
+
+
+.title{
+    color: #157c7c;
+    font-size: 60px;
+}
+
+.txt{
+    margin-top: 50px;
+}
+
+.text{
+    color: #157c7c;
+    font-size: 30px;
+}
+
+.back{
+    background-color: #50f4ac;
+    border-color: #50f4ac;
+    color: white;
+    width: 100%;
+    border-radius: 25px;
+}
