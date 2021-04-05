@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { NavbarComponent } from './components/plants/navbar/navbar.component';
 import { PlantComponent } from './components/plants/plant/plant.component';
 import { AddComponent } from './components/plants/add/add.component';
@@ -18,10 +19,19 @@ import { ReadingComponent } from './components/details/reading/reading.component
 import { HeadComponent } from './components/details/head/head.component';
 import { GraphicsComponent } from './components/details/graphics/graphics.component';
 import { ChartsModule } from 'ng2-charts';
+=======
+import { AppRoutingModule } from './app-routing.module';
+import { QrCodeComponent } from './SmartGarden/qr-code/qr-code.component';
+import { NavbarComponent } from './SmartGarden/navbar/navbar.component';
+import { FooterComponent } from './SmartGarden/footer/footer.component';
+import { HistorialCrecimientoComponent } from './SmartGarden/historial-crecimiento/historial-crecimiento.component';
+import { JardinesComponent } from './SmartGarden/jardines/jardines.component';
+>>>>>>> 32579554a916425fe7a114cf7bce463d6d73dab6
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     NavbarComponent,
     PlantComponent,
     AddComponent,
@@ -41,6 +51,17 @@ import { ChartsModule } from 'ng2-charts';
     ZXingScannerModule,
     NgQrScannerModule,
     ChartsModule
+=======
+    QrCodeComponent,
+    NavbarComponent,
+    FooterComponent,
+    HistorialCrecimientoComponent,
+    JardinesComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+>>>>>>> 32579554a916425fe7a114cf7bce463d6d73dab6
   ],
   providers: [],
   bootstrap: [AppComponent]
